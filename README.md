@@ -1,20 +1,31 @@
-# ChatApp
-## Instructions provided by Philana and updated with small adjustments
+# React/Flask/Socket io demo
+
+## Install flask
+
+```$ pip install flask```
 
 ## Upgrade Node version to v8.17.0 or later
 
 ```$ nvm install v8.17.0```
 
+## If you're using a virtual env install npm with:
+
+```$ source ./bin/activate```
+```pip install nodeenv```
+```nodeenv -p ```
+
+And test with:
+```npm install -g npm```
+```npm -v```
+
 ## Install initial `npm` dependencies from `package.json`
 
 This line run  `npm`, which looks inside our `package.json` file, retrieves a list of
-packages, and installs them to the `node_modules` folder inside your repository. `node_modules` folder **does not** need to be pushed to Heroku or GitHub.
+packages, and installs them to the `node_modules` folder inside your repository. `node_modules` folder **does not** need to be pushed to GitHub.
 
 ```$ npm install```
 
 ## Install Webpack
-
-This line installs Webpack on your Cloud9 workspace.
 
 ```$ npm install --save-dev webpack ```
 
@@ -22,19 +33,11 @@ This line installs Webpack on your Cloud9 workspace.
 
 ## Install socketio
 
-This line installs socketio on your Cloud9 workspace.
-
 ```$ pip3 install flask-socketio ```
-
-This line installs eventlet on your Cloud9 workspace.
-
-```pip3 install eventlet```
 
 update wepack to recognize socket.io when using "npm run watch" later on
 
 ```npm install socket.io-client --save```
-
-
 
 ## Compile Javascript using Webpack
 
@@ -45,8 +48,16 @@ configuration options, and starts transpiling your JS code into `static/script.j
 
 (The program should not stop running. Leave it running.)
 
+If this fails with "sh: webpack: command not found" you my need to run:
+
+```$ npm install -g webpack```
+
+If you see "Error: Can't resolve 'babel-loader'" you may need to run:
+
+```$ npm install babel-loader --save```
+
 ## Run the web app
 
-Open a new terminal in your AWS Cloud9 environment (click the little green + button near your current terminal and choose 'New Terminal'). Run `app.py` (from the same folder, but new terminal) and verify that the React renders.
+Open a new terminal in your environment. Run `app.py` (from the same folder, but new terminal) and verify that the React renders.
 
-**Do not manually edit `static/script.js`! It will update when you make changes. You DO need to push this file to Heroku and GitHub**
+**Do not manually edit `static/script.js`! It will update when you make changes. You DO need to push this file to GitHub**
