@@ -5,6 +5,10 @@ This is a quick demo for the above mentioned technologies. The main page shows a
 
 ```$ pip install flask```
 
+## Install nvm
+
+```$ brew install nvm```
+
 ## Upgrade Node version to v8.17.0 or later
 
 ```$ nvm install v8.17.0```
