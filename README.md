@@ -1,4 +1,5 @@
 # React/Flask/Socket io demo
+This is a quick demo for the above mentioned technologies. The main page shows an input element with an associated button. A new socket is opened with Socket IO on the pyhon server side when a new client connects (accesses the webpage). Typing something into the input field and clicking the button sends the data to the backend and inserts it into a python list (a temp DB until we start working with SQL). The server then sends a response message verifying it got the message and includes the updated list, which then gets displayed on the front end. If the item is already in the python list then the server sends a different message acknowledging the duplicate.
 
 ## Install flask
 
